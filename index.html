@@ -68,13 +68,15 @@ h1, h2 {
     text-align: center;
 }
 
-/* ===== GRID & CARD ===== */
+/* ===== GRID & CARD (ĐÃ CĂN GIỮA) ===== */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 220px));
+    gap: 25px;
     padding: 20px;
+    justify-content: center;   /* CĂN GIỮA CẢ DÃY */
 }
+
 .card {
     background: white;
     padding: 15px;
@@ -82,14 +84,21 @@ h1, h2 {
     text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     cursor: pointer;
+    transition: 0.3s;
 }
+.card:hover {
+    transform: translateY(-5px);
+}
+
 .card-name {
     font-weight: bold;
+    font-size: 17px;
 }
 .card-date {
     font-size: 14px;
     color: gray;
 }
+
 .card img {
     width: 130px;
     height: 130px;
@@ -97,7 +106,9 @@ h1, h2 {
     border-radius: 10px;
     margin-top: 10px;
     display: none;
+    border: 3px solid #d4af37;
 }
+
 .card.show img {
     display: block;
 }
@@ -107,6 +118,7 @@ h1, h2 {
     text-align: center;
     margin: 30px;
 }
+
 .back-top {
     display: block;
     text-align: center;
@@ -147,12 +159,12 @@ h1, h2 {
     <div class="card" onclick="toggleCard(this)">
         <div class="card-name">Võ Thị Lam Băng</div>
         <div class="card-date">16-04-2008</div>
-        <img src="IMG_0872.JPG">
+             <img src="IMG_0872.JPG">
     </div>
     <div class="card" onclick="toggleCard(this)">
         <div class="card-name">Nguyễn Thảo Trinh</div>
         <div class="card-date">15-03-2008</div>
-        <img src="IMG_0873.JPG">
+              <img src="IMG_0873.JPG">
     </div>
     <div class="card" onclick="toggleCard(this)">
         <div class="card-name">Phạm Nguyễn Kim Thơ</div>
@@ -207,7 +219,7 @@ h1, h2 {
     <div class="card" onclick="toggleCard(this)">
         <div class="card-name">Phạm Thị Anh Thư</div>
         <div class="card-date">10-11-2008</div>
-        <img src="IMG_0875.JPG">
+              <img src="IMG_0875.JPG">
     </div>
     <div class="card" onclick="toggleCard(this)">
         <div class="card-name">Trần Nguyễn Trường Đông</div>
