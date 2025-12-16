@@ -5,9 +5,10 @@
 <title>Group 2 – Trang Web Hoàn Chỉnh</title>
 
 <style>
+/* ===== BODY ===== */
 body {
     font-family: "Segoe UI", sans-serif;
-    background: linear-gradient(135deg, #fdfcfb, #e2d1c3);
+    background: linear-gradient(135deg, #fdfcfb, #f3e8dd);
     margin: 0;
 }
 
@@ -19,14 +20,17 @@ body {
     top: 0;
     text-align: center;
     z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 .menu a {
     color: white;
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s;
 }
 .menu a:hover {
+    color: #fffacd;
     text-decoration: underline;
 }
 
@@ -54,6 +58,7 @@ body {
     font-size: 26px;
     text-align: center;
     padding: 20px;
+    font-weight: bold;
 }
 
 /* ===== TIÊU ĐỀ ===== */
@@ -64,8 +69,11 @@ h1, h2 {
 .section-title {
     margin: 30px 0 15px;
     font-size: 24px;
-    color: #b8860b;
+    background: linear-gradient(90deg, #f7c59f, #f0a57d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align: center;
+    font-weight: bold;
 }
 
 /* ===== GRID & CARD ===== */
@@ -76,15 +84,21 @@ h1, h2 {
     padding: 20px;
 }
 .card {
-    background: white;
+    background: linear-gradient(145deg, #fff7f0, #fff2e0);
     padding: 15px;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
     cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 .card-name {
     font-weight: bold;
+    color: #5c4033;
 }
 .card-date {
     font-size: 14px;
@@ -107,6 +121,10 @@ h1, h2 {
     text-align: center;
     margin: 30px;
 }
+.media-box img, .media-box iframe, .media-box video {
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
 .back-top {
     display: block;
     text-align: center;
@@ -117,6 +135,11 @@ h1, h2 {
     width: 220px;
     border-radius: 10px;
     text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+.back-top:hover {
+    background: #d4af37;
 }
 </style>
 </head>
@@ -220,7 +243,7 @@ h1, h2 {
 <h2 id="tapthe">ẢNH TẬP THỂ GROUP 2</h2>
 <div class="media-box">
     <a href="https://tuyensinhso.vn/tuyen-sinh-247.html" target="_blank">
-        <img src="anhtapthe_0882.jpg" width="400" style="border-radius:10px;">
+        <img src="anhtapthe_0882.jpg" width="400">
     </a>
 </div>
 
@@ -256,4 +279,3 @@ function toggleCard(card) {
 
 </body>
 </html>
-
